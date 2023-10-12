@@ -1,0 +1,42 @@
+The task involves creating a Python function called compare_subs(submission1, submission2) for detecting text similarity in student submissions. The submissions are preprocessed strings containing only lowercase letters and spaces.
+
+Input:
+Two preprocessed text submissions, submission1 and submission2.
+
+Output:
+The function returns a list containing:
+The longest common substring between submission1 and submission2.
+The similarity score for submission1 as a percentage of the longest common substring.
+The similarity score for submission2 as a percentage of the longest common substring.
+
+Examples:
+
+Example 1:
+submission1: 'the quick brown fox jumped over the lazy dog'
+submission2: 'my lazy dog has eaten my homework'
+
+Output: [' lazy dog', 20, 27]
+
+The longest common substring is ' lazy dog', 9 characters long.
+submission1 similarity score: 20% (rounded) of the longest common substring.
+submission2 similarity score: 27% (rounded) of the longest common substring.
+
+Example 2:
+submission1: 'radix sort and counting sort are both non comparison sorting algorithms'
+submission2: 'counting sort and radix sort are both non comparison sorting algorithms'
+
+Output: [' sort are both non comparison sorting algorithms', 68, 68]
+
+The longest common substring is ' sort are both non comparison sorting algorithms', 48 characters long.
+Both submission1 and submission2 have a similarity score of 68% (rounded) of the longest common substring.
+Complexity and Algorithm Requirements:
+
+Building Suffix Tree:
+
+Time and Space Complexity: O((N+M)^2)
+
+Computing Comparison:
+
+Time and Space Complexity: O(N + M)
+
+The function involves two processes: building a suffix tree (with O((N+M)^2) time and space complexity) and computing the comparison between the strings (with O(N + M) time and space complexity). These processes are implemented separately in the function.
