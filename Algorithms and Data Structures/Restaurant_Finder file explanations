@@ -1,0 +1,25 @@
+Burger Queen, a fast-food chain, plans to open restaurants along a newly built freeway. They have N potential sites with known annual revenues. Burger Queen wants to maximize revenue while adhering to a policy: no two restaurants can be within a distance of d km from each other. They need a Python function restaurantFinder(d, site_list) that takes the distance parameter d and a list of site revenues. The function must return a tuple (total_revenue, selected_sites), where selected_sites are the site numbers to open restaurants, ensuring maximum revenue while maintaining the distance constraint. The function needs to use O(N) space and O(N) time in the worst case.
+
+Explanation:
+
+Input:
+
+d: Distance parameter indicating the minimum distance between any two restaurants.
+site_list: A list containing annual revenue for each potential site along the freeway.
+Function Objective:
+
+Maximize total revenue by choosing restaurant sites while ensuring no two sites are within d km of each other.
+Constraints:
+
+No two restaurants can be within d km of each other.
+The function should use O(N) space and O(N) time complexity.
+Output:
+
+total_revenue: Total annual revenue generated if restaurants are opened at selected sites.
+selected_sites: A list of site numbers (in ascending order) where restaurants should be opened to achieve maximum revenue.
+Example:
+
+For input restaurantFinder(1,[50, 10, 12, 65, 40, 95, 100, 12, 20, 30]):
+d = 1, and there are 10 potential sites with given revenues.
+Possible output: (252, [1, 4, 6, 8, 10])
+Explanation: Restaurants can be opened at sites 1, 4, 6, 8, and 10, ensuring no two restaurants are within 1 km of each other. The total revenue generated is 252 million dollars.
